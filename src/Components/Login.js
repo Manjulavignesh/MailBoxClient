@@ -1,6 +1,8 @@
 import { useRef, useState } from "react";
 import { Card, Navbar } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
+    const navigate=useNavigate();
   const [newUser, setNewUser] = useState(false);
   const emailInput = useRef();
   const passwordInput = useRef();
@@ -64,6 +66,7 @@ const Login = () => {
       )
         .then((res) => {
           if (res.ok) {
+            navigate("/WelcomePage")
         return res.json();
           } else {
             return res.json().then((data) => {
@@ -74,7 +77,7 @@ const Login = () => {
           }
         })
         .then((data) => {
-          console.log("signedUp successfully")
+          localStorage.setItem("token",data.idToken)
         })
         .catch((err) => {
           alert(err.message);
