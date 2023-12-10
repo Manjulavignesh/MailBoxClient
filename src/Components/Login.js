@@ -103,7 +103,7 @@ const Login = () => {
         }}
       >
         <Card.Title style={{ textAlign: "center", padding: 5 }}>
-          {!newUser && <h2 style={{ fontSize: 35,color:"white" }}> LogIn </h2>}
+          {!newUser && <h2 style={{ fontSize: 35,color:"white" }} role="login"> LogIn </h2>}
           {newUser && <h2 style={{ fontSize: 35 ,color:"white"}}> SignUp</h2>}
         </Card.Title>
         <Card.Body>
