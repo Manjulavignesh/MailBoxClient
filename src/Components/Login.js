@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Card } from "react-bootstrap";
+import { Card, Navbar } from "react-bootstrap";
 const Login = () => {
   const [newUser, setNewUser] = useState(false);
   const emailInput = useRef();
@@ -84,13 +84,18 @@ const Login = () => {
   };
   return (
     <div>
+        <div style={{background:"black",height:50,color:"white",fontSize:20,fontWeight:50}}>
+        <Navbar>
+        <h1 style={{fontFamily:"revert-layer",fontStyle:"italic"}}>Mail Box Client</h1>
+        </Navbar>
+        </div>
       <Card
         style={{
           background: "black",
           width: 350,
           height: 450,
           marginLeft: 600,
-          marginTop: 150,
+          marginTop: 100,
           borderRadius: "8px",
         }}
       >
