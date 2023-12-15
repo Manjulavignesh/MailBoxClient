@@ -92,6 +92,7 @@ const Login = () => {
         <h1 style={{fontFamily:"revert-layer",fontStyle:"italic"}}>Mail Box Client</h1>
         </Navbar>
         </div>
+        
       <Card
         style={{
           background: "black",
@@ -236,7 +237,9 @@ const Login = () => {
           </form>
         </Card.Body>
       </Card>
+      
     </div>
+    
   );
 };
 export default Login;
