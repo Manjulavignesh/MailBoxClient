@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import ComposeEmail from "./ComposeEmail";
+import EmailList from "./EmailList";
 
 const LeftBar = () => {
   return (
@@ -11,7 +12,7 @@ const LeftBar = () => {
       <ComposeEmail/>
       <a href="" style={{textDecoration:"none"}}>
         {" "}
-        <h2 style={{ marginLeft: 35,color:"white",marginTop:25 }}>Inbox</h2>
+        <h2 style={{ marginLeft: 35,color:"white",marginTop:35 }}>Inbox</h2>
       </a>
       <a href="" style={{textDecoration:"none"}}>
         {" "}
@@ -25,6 +26,7 @@ const LeftBar = () => {
         {" "}
         <h2 style={{ marginLeft: 35,color:"white",marginTop:25 }}>Draft</h2>
       </a>
+      <EmailList/>
     </Card>
     
       </div>

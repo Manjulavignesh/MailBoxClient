@@ -114,12 +114,13 @@ const Login = () => {
               ref={emailInput}
               placeholder="Email"
               style={{
-                width: "75%",
-                height: 25,
+                width: "85%",
+                height: 35,
                 padding: "6px 20px",
                 border: "2px solid #dedede",
                 borderRadius: "10px",
                 marginLeft: 25,
+                marginTop:25
               }}
             />
             <input
@@ -127,13 +128,13 @@ const Login = () => {
               placeholder="Password"
               ref={passwordInput}
               style={{
-                width: "75%",
-                height: 25,
+                width: "85%",
+                height: 35,
                 padding: "6px 20px",
                 border: "2px solid #dedede",
                 borderRadius: "10px",
                 marginLeft: 25,
-                marginTop: 25,
+                marginTop: 35,
               }}
             />
             {newUser && (
@@ -142,23 +143,23 @@ const Login = () => {
                 ref={confirmPassword}
                 placeholder="Confirm Password"
                 style={{
-                  width: "75%",
-                  height: 25,
+                  width: "85%",
+                  height: 35,
                   padding: "6px 20px",
                   border: "2px solid #dedede",
                   borderRadius: "10px",
                   marginLeft: 25,
-                  marginTop: 25,
+                  marginTop: 35,
                 }}
               />
             )}
             {!newUser && (
               <button
                 style={{
-                  width: "75%",
-                  marginTop: 40,
+                  width: "85%",
+                  marginTop: 70,
                   padding: "12px 20px",
-                  marginLeft: 45,
+                  marginLeft: 25,
                   borderRadius: "75px",
                   background: "#0f66ef",
                   border: "white",
@@ -181,7 +182,7 @@ const Login = () => {
               <button
                 style={{
                   width: "75%",
-                  marginTop: 40,
+                  marginTop: 70,
                   padding: "12px 20px",
                   marginLeft: 45,
                   borderRadius: "75px",

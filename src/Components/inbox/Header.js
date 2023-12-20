@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import LeftBar from "./LeftBar";
-
+import EmailList from "./EmailList";
 const Header = () => {
   return (
     <div>
