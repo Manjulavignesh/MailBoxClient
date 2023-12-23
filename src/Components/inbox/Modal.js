@@ -17,18 +17,19 @@ const Modal = (props) => {
     const plainText = editorState.getCurrentContent().getPlainText();
     props.closeModal();
     console.log(email, Subject, plainText);
-    db.collection("emails").doc(email).set({
-      email:email,
-      subject:Subject,
-      Message:plainText
-  })
-  .then(() => {
-      console.log("Document successfully written!");
-
-  })
-  .catch((error) => {
-      console.error("Error writing document: ", error);
-  });
+    db.collection("emails")
+      .doc(email)
+      .set({
+        email: email,
+        subject: Subject,
+        Message: plainText,
+      })
+      .then(() => {
+        console.log("Document successfully written!");
+      })
+      .catch((error) => {
+        console.error("Error writing document: ", error);
+      });
   };
   return (
     <form onSubmit={submitHandler}>

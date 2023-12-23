@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import { db } from "./Firebase";
 import "./EmailList.css";
 import EmailRow from "./EmailRow";
+import { useDispatch } from "react-redux";
+import { mailAction } from "../../store";
 const EmailList = () => {
+  const dispatch=useDispatch();
   const [emails, setEmails] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -28,14 +31,16 @@ const EmailList = () => {
       newArray.push(uniqueObject[i]);
     }
     console.log(newArray);
+    dispatch(mailAction.addMessage(newArray));
   }
   removeDuplicates();
   
   return (
     <div className="app-container">
-      <table>
+  <table>
         <thead>
           <tr>
+            <th></th>
             <th>From</th>
             <th>Subject</th>
             <th>Description</th>
@@ -53,7 +58,8 @@ const EmailList = () => {
           ))}
       </table>
     </div>
-  );
+    );
+  
 };
 
 export default EmailList;
