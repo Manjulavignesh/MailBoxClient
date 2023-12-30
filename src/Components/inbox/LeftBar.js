@@ -15,21 +15,13 @@ const LeftBar = () => {
             Inbox
           </h4>
         </a>
-        <a href="" style={{ textDecoration: "none" }}>
-          <h4 style={{ marginLeft: 35, color: "white", marginTop: 25 }}>
-            Important
-          </h4>
-        </a>
+        
         <a href="" style={{ textDecoration: "none" }}>
           <h4 style={{ marginLeft: 35, color: "white", marginTop: 25 }}>
             Sent
           </h4>
         </a>
-        <a href="" style={{ textDecoration: "none" }}>
-          <h4 style={{ marginLeft: 35, color: "white", marginTop: 25 }}>
-            Draft
-          </h4>
-        </a>
+        
         <EmailList />
       </Card>
     </div>
