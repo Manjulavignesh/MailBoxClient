@@ -29,7 +29,6 @@ function OpenInbox(props) {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary">Understood</Button>
         </Modal.Footer>
       </Modal>
     </>
