@@ -5,7 +5,7 @@ import EmailRow from "./EmailRow";
 import { useDispatch } from "react-redux";
 import { mailAction } from "../../store";
 const EmailList = () => {
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
   const [emails, setEmails] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -14,14 +14,14 @@ const EmailList = () => {
         .get()
         .then((querySnapshot) => {
           querySnapshot.forEach((doc) => {
-            setEmails((prev) => [...prev,doc.data()]);
+            setEmails((prev) => [...prev, doc.data()]);
           });
         });
     };
     fetchData();
   }, []);
   let newArray = [];
-  const removeDuplicates=()=> {
+  const removeDuplicates = () => {
     let uniqueObject = {};
     for (let i in emails) {
       let objTitle = emails[i]["subject"];
@@ -32,18 +32,18 @@ const EmailList = () => {
     }
     console.log(newArray);
     dispatch(mailAction.addMessage(newArray));
-  }
+  };
   removeDuplicates();
-  
+
   return (
     <div className="app-container">
-  <table>
+      <table>
         <thead>
           <tr>
-            <th></th>
             <th>From</th>
             <th>Subject</th>
             <th>Description</th>
+            <th></th>
           </tr>
         </thead>
         {newArray != undefined &&
@@ -58,8 +58,7 @@ const EmailList = () => {
           ))}
       </table>
     </div>
-    );
-  
+  );
 };
 
 export default EmailList;

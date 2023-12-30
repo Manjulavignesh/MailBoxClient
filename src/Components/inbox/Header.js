@@ -11,7 +11,7 @@ const Header = () => {
           <Navbar.Brand
             style={{
               fontStyle: "italic",
-              fontSize: 40,
+              fontSize: 35,
               color: "white",
               fontFamily: "revert-layer",
             }}
@@ -22,9 +22,10 @@ const Header = () => {
             type="text"
             style={{
               marginLeft: 150,
+              marginTop:10,
               width: 750,
               borderRadius: "5px",
-              height: 35,
+              height: 40,
               fontSize: 15,
             }}
             placeholder="Search Email"

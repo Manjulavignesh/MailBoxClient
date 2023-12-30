@@ -26,6 +26,7 @@ const Modal = (props) => {
       })
       .then(() => {
         console.log("Document successfully written!");
+        window.location.reload ();
       })
       .catch((error) => {
         console.error("Error writing document: ", error);

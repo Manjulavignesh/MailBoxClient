@@ -89,7 +89,7 @@ const Login = () => {
     <div>
         <div style={{background:"black",height:50,color:"white",fontSize:20,fontWeight:50}}>
         <Navbar>
-        <h1 style={{fontFamily:"revert-layer",fontStyle:"italic"}}>Mail Box Client</h1>
+        <h2 style={{fontFamily:"revert-layer",fontStyle:"italic"}}>Mail Box Client</h2>
         </Navbar>
         </div>
         
@@ -157,7 +157,7 @@ const Login = () => {
               <button
                 style={{
                   width: "85%",
-                  marginTop: 70,
+                  marginTop: 45,
                   padding: "12px 20px",
                   marginLeft: 25,
                   borderRadius: "75px",
@@ -173,7 +173,7 @@ const Login = () => {
             {!newUser && (
               <a
                 href="http://localhost:3000/forgotpassword"
-                style={{ padding: "0px 115px" ,color:"white"}}
+                style={{ padding: "0px 95px" ,color:"white"}}
               >
                 Forgot password
               </a>
@@ -182,7 +182,7 @@ const Login = () => {
               <button
                 style={{
                   width: "75%",
-                  marginTop: 70,
+                  marginTop: 25,
                   padding: "12px 20px",
                   marginLeft: 45,
                   borderRadius: "75px",
@@ -201,7 +201,7 @@ const Login = () => {
                   onClick={signUpHandler}
                   style={{
                     width: "95%",
-                    marginTop: 40,
+                    marginTop: 2,
                     padding: "12px 20px",
                     marginLeft: 10,
                     borderRadius: "4px",
